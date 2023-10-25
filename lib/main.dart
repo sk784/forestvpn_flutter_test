@@ -1,21 +1,8 @@
 import 'package:flutter/material.dart';
+import 'injectable/injectable_init.dart';
+import 'presentation/app/app_page.dart';
 
 void main() {
-  runApp(const ForestVPNTestApp());
-}
-
-class ForestVPNTestApp extends StatelessWidget {
-  const ForestVPNTestApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'ForestVPN test',
-      home: Scaffold(
-        body: Center(
-          child: Text('News screen'),
-        ),
-      ),
-    );
-  }
+  configureDependencies();
+  runApp(const AppPage());
 }
